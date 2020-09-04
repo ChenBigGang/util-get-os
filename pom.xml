@@ -6,17 +6,35 @@
 
     <groupId>site.twofish.util</groupId>
     <artifactId>get-os</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <!--<version>1.0-SNAPSHOT</version>-->
+    <version>1.0.0</version>
 
-    <distributionManagement>
+    <!--发布到本地目录-->
+    <!--<distributionManagement>
         <repository>
-            <id>local-repo-release</id>
+            <id>project-repo-release</id>
             <name>GitHub Release</name>
             <url>file://${project.basedir}/maven-repo</url>
         </repository>
+    </distributionManagement>-->
+
+    <repositories>
+        <repository>
+            <id>github</id>
+            <name>GitHub OWNER Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/ChenBigGang/util-get-os</url>
+        </repository>
+    </repositories>
+
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>github packages</name>
+            <url>https://maven.pkg.github.com/ChenBigGang/util-get-os</url>
+        </repository>
     </distributionManagement>
 
-    <build>
+    <!--<build>
         <plugins>
             <plugin>
                 <artifactId>maven-source-plugin</artifactId>
@@ -43,5 +61,5 @@
                 </executions>
             </plugin>
         </plugins>
-    </build>
+    </build>-->
 </project>
